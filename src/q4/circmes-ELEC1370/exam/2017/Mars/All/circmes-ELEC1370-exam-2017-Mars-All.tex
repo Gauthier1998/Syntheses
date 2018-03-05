@@ -1,4 +1,4 @@
-\documentclass[en]{../../../../../../eplexam}
+-\documentclass[en]{../../../../../../eplexam}
 \usepackage{../../../../../../eplunits}
 \usepackage{circuitikz}
 \usepackage{steinmetz}
@@ -15,7 +15,7 @@ On considère le circuit suivant, opérant à $\SI{2}{\kilo\hertz}$.
 \begin{center}
 	\begin{circuitikz}[american]
 		\draw (0,2) to [R,l_= 2R] (0,0) -- (2,0) to[I=$2\phase{0^\circ}$,*-*] (2,2) -- (0,2);
-		\draw (2,2) to[V=$12\phase{0^\circ}$] (4,2) to[C=$\SI{-j}{\ohm}$,*-*] (4,0) -- (2,0);
+		\draw (2,2) to[V=$-12\phase{0^\circ}$] (4,2) to[C=$\SI{-j}{\ohm}$,*-*] (4,0) -- (2,0);
 		\draw (4,2) to[L = $\SI{j}{\ohm}$] (6,2) to[R = R,*-*] (6,0) -- (4,0); 
 		\draw (6,2) to[short,-*] (8,2) node[below]{+};
 		\draw (6,0) to[short,-*] (8,0) node[above]{-};
@@ -26,14 +26,14 @@ On considère le circuit suivant, opérant à $\SI{2}{\kilo\hertz}$.
 \begin{itemize}
 	\item (2 points) Si $R = \SI{0.5}{\ohm}$, quel est l'équivalent de Norton du circuit encadré vu à ses bornes ?
 	\item (8 points) Si on mesure une tension $V_0 = 5.06\angle{-71.56^\circ}V$ (amplitude et phase), calculer:
-	\subitem le courant (amplitude et phase) dans la capacité
-	\subitem la valeur de la résistance R
-	\subitem la tension (amplitude et phase) aux bornes de la source de courant
+	\subitem le courant (amplitude et phase) dans la capacité;
+	\subitem la valeur de la résistance R;
+	\subitem la tension (amplitude et phase) aux bornes de la source de courant.
 \end{itemize}
 
 \begin{solution}
 	\begin{itemize}
-		\item Pour trouver $R_{eq}$, on annule les sources
+		\item Pour trouver $R_{eq}$, on annule les sources:
 		
 		\begin{center}
 			\begin{circuitikz}
@@ -88,13 +88,13 @@ On considère le circuit suivant, opérant à $\SI{2}{\kilo\hertz}$.
 		$$-2R^2j * 2\angle\ang{0} = -2RV_0 j+2R V_0(R+j)-jV_0(R+j)+Rj* 12\angle\ang{0} $$
 		$$(4\angle\ang{90} + 2V_0)R^2+ (12\angle\ang{90} -jV_0)R +V_0 = 0$$
 		
-		On tomber sur une équation du second degré en R. On trouve alors $R \approx 1$
+		On tombe ainsi sur une équation du second degré en R. On trouve alors $R \approx 1$
 		
 		On peut calculer la tension après la source de tension:
 		$$ V_2 = 7.156\angle\ang{-26.56}$$
 		
 		
-		On peut ensuite trouver les autres inconnues. On trouve alors $I_C=7.16\angle\ang{63.44}$ et $V_1 = 6.50\angle\ang{-150}$
+		On peut ensuite trouver les autres inconnues. On trouve alors $I_C=7.16\angle\ang{63.44}$ et $V_1 = 6.450\angle\ang{-150}$
 		
 	\end{itemize}
 \end{solution}
